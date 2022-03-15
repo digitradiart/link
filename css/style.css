@@ -20,8 +20,7 @@ body {
   margin: 30px auto;
 }
 .container .content {
-  min-height: 100vh;
-  /* From https://css.glass */
+  height: 90vh;
   background: rgba(84, 71, 71, 0.18);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -35,7 +34,7 @@ body {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
   position: fixed;
-  margin: 20px 60px;
+  margin: 20px 200px;
 }
 
 /* PHONE DISPLAY */
@@ -46,5 +45,10 @@ body {
   .container {
     width: 90%;
     margin: 15px auto;
+    margin: 20px 60px;
+  }
+
+  .content {
+    min-height: 100vh;
   }
 }
