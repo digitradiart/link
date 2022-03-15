@@ -38,17 +38,15 @@ body {
 }
 
 /* PHONE DISPLAY */
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 800px) {
   .container {
-    width: 90%;
-    /* margin: 5px; */
     background-color: blue;
   }
 
   .content {
     min-height: 90vh;
-    width: 100%;
   }
+
   .btn-group {
     width: 100%;
     margin: 5px 0px;
