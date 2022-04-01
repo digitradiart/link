@@ -20,7 +20,7 @@ body {
   margin: 30px auto;
 }
 .container .content {
-  height: 90vh;
+  min-height: 90vh;
   background: rgba(84, 71, 71, 0.18);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -35,6 +35,15 @@ body {
   border-radius: 10px;
   position: fixed;
   margin: 20px 200px;
+}
+
+/* ACCORDION */
+.accordion {
+  margin: 10px;
+}
+
+.accordion-title {
+  text-align: center;
 }
 
 /* PHONE DISPLAY */
