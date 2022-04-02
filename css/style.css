@@ -37,7 +37,7 @@ body {
 }
 
 .btn-group {
-  background-color: rgba(182, 202, 255, 0.8);
+  background-color: rgb(182, 202, 255);
   border-radius: 10px;
   position: fixed;
   margin: 20px 200px;
