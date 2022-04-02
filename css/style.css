@@ -19,6 +19,7 @@ body {
 .container {
   margin: 30px auto;
 }
+
 .container .content {
   min-height: 90vh;
   background: rgba(84, 71, 71, 0.18);
@@ -28,6 +29,7 @@ body {
   -webkit-backdrop-filter: blur(12.1px);
   border: 1px solid rgba(84, 71, 71, 0.42);
   position: relative;
+  padding: 20px 80px;
 }
 
 .btn-group {
@@ -46,19 +48,19 @@ body {
   text-align: center;
 }
 
+.accordion-item {
+  background-color: transparent;
+}
+
 /* PHONE DISPLAY */
 @media only screen and (max-width: 800px) {
-  /* .container {
-    background-color: blue;
-  } */
-
-  .content {
+  .container .content {
     min-height: 80vh;
+    padding: 5px;
   }
 
   .btn-group {
     width: 100%;
     margin: 5px 0px;
-    /* background-color: red; */
   }
 }
