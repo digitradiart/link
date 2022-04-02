@@ -58,6 +58,10 @@ body {
 
 /* PHONE DISPLAY */
 @media only screen and (max-width: 800px) {
+  .container {
+    margin: 40px auto;
+    /* background-color: rgb(6, 8, 75); */
+  }
   .container .content {
     min-height: 80vh;
     padding: 5px;
