@@ -56,6 +56,9 @@ body {
   background-color: transparent;
 }
 
+p iframe {
+  width: 70%;
+}
 /* PHONE DISPLAY */
 @media only screen and (max-width: 800px) {
   .container {
