@@ -59,6 +59,55 @@ body {
 p iframe {
   width: 70%;
 }
+
+#app {
+  margin: 10% auto;
+  width: 400px;
+  opacity: 0.9;
+}
+
+#app h1 {
+  text-align: center;
+  font-size: 2em;
+  padding: 5px;
+  color: white;
+  background-color: rgb(182, 202, 255);
+}
+
+#app h2 {
+  font-size: 1.25em;
+  text-align: center;
+}
+
+#app table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#app table td {
+  font-size: 1em;
+  padding: 1em;
+}
+
+#app table td:last-child {
+  text-align: right;
+}
+
+#app table tr:nth-child(even) {
+  background-color: transparent;
+}
+
+#app table tr:nth-child(odd) {
+  background-color: rgb(182, 202, 255);
+  color: rgb(44, 44, 44);
+}
+
+#app table td tr {
+  font-size: 1em;
+  padding: 0.5em;
+  /* margin: 5em; */
+}
+
 /* PHONE DISPLAY */
 @media only screen and (max-width: 800px) {
   .container {
@@ -73,5 +122,11 @@ p iframe {
   .btn-group {
     width: 100%;
     margin: 5px 0px;
+  }
+
+  #app {
+    margin: 10px auto;
+    padding: 5% auto;
+    width: 90%;
   }
 }

@@ -1,12 +1,10 @@
-var app = document.getElementById('app');
-app.innerText = 'HELLO';
 function prayerTime(latitude, longitude) {
   fetch('http://api.aladhan.com/v1/calendar?latitude=' + latitude + '&longitude=' + longitude + '&method=4')
     .then((theResponse) => theResponse.json())
     .then(function (theResponse) {
       let date = new Date();
       let today = date.getDate();
-      // console.log(`today is ${today}`);
+      console.log(`today is ${today}`);
       let data = theResponse.data[0].timings;
       let dateLocation = theResponse.data[today - 1].date.readable;
       console.log(`today is ${dateLocation}`);
@@ -62,9 +60,9 @@ function userLocation() {
 function index() {
   //first function
   let app = document.getElementById('app');
-  let h1 = document.createElement('h1');
-  h1.innerHTML = 'Prayer Times';
-  app.appendChild(h1);
+  //   let h1 = document.createElement('h1');
+  //   h1.innerHTML = 'Waktu Shalat';
+  //   app.appendChild(h1);
   userLocation();
 }
 
