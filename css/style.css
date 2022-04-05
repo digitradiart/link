@@ -64,6 +64,7 @@ p iframe {
   margin: 10% auto;
   width: 400px;
   opacity: 0.9;
+  background-color: blue;
 }
 
 #app h1 {
@@ -105,7 +106,10 @@ p iframe {
 #app table td tr {
   font-size: 1em;
   padding: 0.5em;
-  /* margin: 5em; */
+}
+
+#calendar {
+  color: red;
 }
 
 /* PHONE DISPLAY */
