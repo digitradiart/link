@@ -1,15 +1,16 @@
+// FUNCTION TO GET USER LOCATION
 function prayerTime(latitude, longitude) {
-  fetch('https://api.aladhan.com/v1/calendar?latitude=' + latitude + '&longitude=' + longitude + '&method=4')
+  fetch('https://api.aladhan.com/v1/calendar?latitude=' + latitude + '&longitude=' + longitude + '&method=11')
     .then((theResponse) => theResponse.json())
     .then(function (theResponse) {
       let date = new Date();
       let today = date.getDate();
-      console.log(`today is ${today}`);
+      // console.log(`today is ${today}`);
       let data = theResponse.data[0].timings;
       let dateLocation = theResponse.data[today - 1].date.readable;
-      console.log(`today is ${dateLocation}`);
+      // console.log(`today is ${dateLocation}`);
       let dateTimezone = theResponse.data[today - 1].meta.timezone;
-      console.log(`today is ${dateTimezone}`);
+      // console.log(`today is ${dateTimezone}`);
 
       let app = document.getElementById('app');
       let table = document.createElement('table');
@@ -37,7 +38,9 @@ function prayerTime(latitude, longitude) {
 
 function success(position) {
   //third function
+  let userlocation = document.getElementById('userlocation');
   prayerTime(position.coords.latitude, position.coords.longitude);
+  userlocation.innerHTML = `lat: ${position.coords.latitude}; lon: ${position.coords.longitude};`;
 }
 
 function error() {
@@ -60,9 +63,6 @@ function userLocation() {
 function index() {
   //first function
   let app = document.getElementById('app');
-  //   let h1 = document.createElement('h1');
-  //   h1.innerHTML = 'Waktu Shalat';
-  //   app.appendChild(h1);
   userLocation();
 }
 

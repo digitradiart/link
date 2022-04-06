@@ -1,13 +1,3 @@
-// (function () {
-//     navigator.geolocation.getCurrentPosition(function (position) {
-//        console.log(position.coords.latitude)
-//        console.log(position.coords.longitude)
-//     },
-//     function (error) {
-//         console.log("The Locator was denied. :(")
-//     })
-// })();
-
 // http://api.aladhan.com/v1/timings/1398332113?latitude=51.508515&longitude=-0.1254872&method=2
 /*STEP:
 1. get user location
