@@ -1,3 +1,7 @@
+// SCRIPT BY AYU
+// http://api.aladhan.com/v1/timings/1398332113?latitude=51.508515&longitude=-0.1254872&method=2
+//https://api.aladhan.com/v1/hijriCalendarByCity?city=Bogor&country=Indonesia&method=4&month=09&year=1443
+
 // FUNCTION TO GET USER LOCATION
 function prayerTime(latitude, longitude) {
   fetch('https://api.aladhan.com/v1/calendar?latitude=' + latitude + '&longitude=' + longitude + '&method=11')
@@ -6,14 +10,18 @@ function prayerTime(latitude, longitude) {
       let date = new Date();
       let today = date.getDate();
       let data = theResponse.data[0].timings;
-      let dateLocation = theResponse.data[today - 1].date.readable;
-      let dateTimezone = theResponse.data[today - 1].meta.timezone;
-
+      let d = theResponse.data[today - 1];
+      let dateReadable = d.date.readable;
+      let dateTimezone = d.meta.timezone;
+      let hijriDay = `${d.date.gregorian.weekday.en}, ${d.date.hijri.day} ${d.date.hijri.month.en} ${d.date.hijri.year}/${dateReadable}`;
+      console.log(hijriDay);
       let app = document.getElementById('app');
+      let day = document.createElement('h2');
       let table = document.createElement('table');
       let tableTbody = document.createElement('tbody');
       let loc = document.createElement('h2');
-      let day = document.createElement('h2');
+      day.innerHTML = hijriDay;
+      app.appendChild(day);
 
       for (i in data) {
         let row = tableTbody.insertRow();
@@ -26,8 +34,6 @@ function prayerTime(latitude, longitude) {
 
       loc.innerHTML = dateTimezone;
       app.appendChild(loc);
-      day.innerHTML = dateLocation;
-      // app.appendChild(day);
       table.appendChild(tableTbody);
       app.appendChild(table);
     });
@@ -37,12 +43,11 @@ function success(position) {
   //third function
   let userlocation = document.getElementById('userlocation');
   prayerTime(position.coords.latitude, position.coords.longitude);
-  userlocation.innerHTML = `Lokasi Anda: lat= ${position.coords.latitude}; lon= ${position.coords.longitude};`;
+  userlocation.innerHTML = `Latitude= ${position.coords.latitude}; Longitude= ${position.coords.longitude};`;
 }
 
 function error() {
-  prayerTime('-6.2087634', '106.845599'); //default lat, lon Jakarta
-  // https://www.gps-latitude-longitude.com
+  prayerTime('-6.2087634', '106.845599'); //default lat, lon Jakarta, Sumber https://www.gps-latitude-longitude.com
 }
 
 function userLocation() {
@@ -56,7 +61,6 @@ function userLocation() {
 
 function index() {
   //first function
-  let app = document.getElementById('app');
   userLocation();
 }
 
