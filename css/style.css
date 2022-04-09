@@ -20,6 +20,10 @@ body {
   color: #fff;
 }
 
+a {
+  color: cadetblue;
+}
+
 .container {
   margin: 30px auto;
 }
@@ -64,7 +68,7 @@ p iframe {
   margin: 10% auto;
   width: 400px;
   opacity: 0.9;
-  background-color: blue;
+  background-color: cadetblue;
 }
 
 #app h1 {
@@ -72,7 +76,7 @@ p iframe {
   font-size: 2em;
   padding: 5px;
   color: white;
-  background-color: rgb(182, 202, 255);
+  background-color: rgb(35, 66, 0);
 }
 
 #app h2 {
@@ -108,8 +112,10 @@ p iframe {
   padding: 0.5em;
 }
 
-#calendar {
-  color: red;
+#today,
+#clock,
+#userlocation {
+  text-align: center;
 }
 
 /* PHONE DISPLAY */

@@ -14,9 +14,10 @@ function startTime() {
   let m = today.getMinutes();
   let s = today.getSeconds();
   var day = today.getDate();
+  console.log(day);
   var month = today.getMonth() + 1;
-  const daylist = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
-  const todayName = daylist[(day % 7) - 2];
+  const daylist = ['Kamis', 'Jumat', 'Sabtu', 'Minggu', 'Senin', 'Selasa', 'Rabu'];
+  const todayName = daylist[day % 7];
   if (day < 10) {
     day = '0' + today.getDate();
   }
