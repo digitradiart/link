@@ -21,7 +21,11 @@ body {
 }
 
 a {
-  color: rgb(139, 176, 245);
+  color: rgb(175, 197, 235);
+}
+
+.fa {
+  color: rgb(58, 115, 212);
 }
 
 .container {
@@ -41,7 +45,7 @@ a {
 }
 
 .btn-group {
-  background-color: rgb(182, 202, 255);
+  background-color: rgb(228, 233, 247);
   border-radius: 10px;
   position: fixed;
   margin: 20px 200px;
