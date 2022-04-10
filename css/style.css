@@ -13,8 +13,7 @@ a {
 
 body {
   font-family: 'Quicksand', sans-serif;
-  /* background-image: url('https://images.unsplash.com/photo-1476842634003-7dcca8f832de?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'); */
-  background-image: url('https://cdn.pixabay.com/photo/2021/10/18/20/18/nature-6722031_960_720.jpg');
+  background-image: url('https://cdn.pixabay.com/photo/2019/11/05/20/36/abu-dhabi-4604499_960_720.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -22,7 +21,7 @@ body {
 }
 
 a {
-  color: cornflowerblue;
+  color: rgb(139, 176, 245);
 }
 
 .container {
@@ -120,10 +119,11 @@ p iframe {
 /* PHONE DISPLAY */
 @media only screen and (max-width: 800px) {
   .container {
-    margin: 15% auto;
+    margin: 20% auto;
   }
   .container .content {
     min-height: 80vh;
+    margin: 20px;
     padding: 5px;
   }
 
@@ -133,8 +133,7 @@ p iframe {
   }
 
   #app {
-    margin: 10px auto;
     padding: 5% auto;
-    width: 90%;
+    width: 85%;
   }
 }

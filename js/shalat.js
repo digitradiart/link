@@ -1,6 +1,6 @@
 // SCRIPT BY AYU
 // http://api.aladhan.com/v1/timings/1398332113?latitude=51.508515&longitude=-0.1254872&method=2
-//https://api.aladhan.com/v1/hijriCalendarByCity?city=Bogor&country=Indonesia&method=4&month=09&year=1443
+// https://api.aladhan.com/v1/hijriCalendarByCity?city=Bogor&country=Indonesia&method=4&month=09&year=1443
 
 // FUNCTION TO GET USER LOCATION
 function prayerTime(latitude, longitude) {
@@ -32,7 +32,7 @@ function prayerTime(latitude, longitude) {
         tableTbody.appendChild(row);
       }
 
-      loc.innerHTML = dateTimezone;
+      loc.innerHTML = `Time zone: ${dateTimezone}`;
       app.appendChild(loc);
       table.appendChild(tableTbody);
       app.appendChild(table);
@@ -43,11 +43,13 @@ function success(position) {
   //third function
   let userlocation = document.getElementById('userlocation');
   prayerTime(position.coords.latitude, position.coords.longitude);
-  userlocation.innerHTML = `Latitude= ${position.coords.latitude}; Longitude= ${position.coords.longitude};`;
+  userlocation.innerHTML = `Lat= ${position.coords.latitude}; Long= ${position.coords.longitude};`;
 }
 
 function error() {
-  prayerTime('-6.2087634', '106.845599'); //default lat, lon Jakarta, Sumber https://www.gps-latitude-longitude.com
+  prayerTime('21.3890824', '39.8579118');
+  // Latitude of Makkah	21.3890824
+  // Longitude of Makkah	39.8579118 https://www.gps-latitude-longitude.com/gps-coordinates-of-makkah
 }
 
 function userLocation() {
