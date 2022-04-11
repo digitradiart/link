@@ -126,6 +126,10 @@ footer {
   margin-top: 10%;
 }
 
+.arabic {
+  font-size: 1.5em;
+}
+
 /* PHONE DISPLAY */
 @media only screen and (max-width: 800px) {
   .container {
