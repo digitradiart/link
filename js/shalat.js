@@ -8,13 +8,13 @@ function prayerTime(latitude, longitude) {
     .then((theResponse) => theResponse.json())
     .then(function (theResponse) {
       let date = new Date();
+      // console.log(theResponse);
       let today = date.getDate();
       let data = theResponse.data[0].timings;
       let d = theResponse.data[today - 1];
       let dateReadable = d.date.readable;
       let dateTimezone = d.meta.timezone;
       let hijriDay = `${d.date.gregorian.weekday.en}, ${d.date.hijri.day} ${d.date.hijri.month.en} ${d.date.hijri.year}/${dateReadable}`;
-      console.log(hijriDay);
       let app = document.getElementById('app');
       let day = document.createElement('h2');
       let table = document.createElement('table');
@@ -43,7 +43,7 @@ function success(position) {
   //third function
   let userlocation = document.getElementById('userlocation');
   prayerTime(position.coords.latitude, position.coords.longitude);
-  userlocation.innerHTML = `Lat= ${position.coords.latitude}; Long= ${position.coords.longitude};`;
+  userlocation.innerHTML = `Position: Latitude= ${position.coords.latitude}; Longitude= ${position.coords.longitude};`;
 }
 
 function error() {
